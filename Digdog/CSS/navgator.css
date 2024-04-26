@@ -1,0 +1,110 @@
+#nav {
+	/*background-color: #51aceb;*/
+	position: fixed;
+	height: 700px;
+	border-radius: 20px 20px;
+	margin: 100px 20px;
+	text-align: center;
+	
+}
+
+#nav ul {
+	padding: 0;
+}
+
+#nav li {
+	display: block;
+	margin: 10px;
+}
+
+#nav li a{
+	text-decoration: none;
+	color: white;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 10px 10px;
+}
+
+#nav li a:hover {
+	background-color: rgba(225,225,225,0.3);
+	font-weight: bold;
+	
+}
+
+.blur {
+	background: rgba(0,0,0,0.3);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+}
+
+#nav2 {
+	/*background-color: #51aceb;*/
+	position: fixed;
+	width: 50%;
+	height: 55px;
+	border-radius: 20px 20px;
+	margin: 100px 20%;
+	
+}
+
+#nav2 img {
+	display: inline-block;
+	width: 35px;
+	border-radius: 10px 10px;
+	margin: 10px 15px;
+	background-color: rgba(225,225,225,0.1);
+}
+
+#nav2 img:hover {
+	background-color: rgba(225,225,225,0.3);
+}
+
+#searchdiv {
+	display: inline;
+}
+
+#searchdiv input {
+	text-decoration: none;
+	display: inline-block;
+	width: 35%;
+	height: 30px;
+	background-color:rgba(0,0,0,0);
+	border-radius: 10px 10px;
+	border: 0;
+	padding-left: 15px;
+	margin: 12px 0 0 65px;
+	position: absolute;
+	color: white;
+}
+
+#searchdiv input:hover {
+	font-weight: bold;
+	border: 0px;
+}
+
+#searchdiv button {
+	text-decoration: none;
+	color: white;
+	display: inline;
+	width: 50px;
+	height: 35px;
+	background-color: rgba(0,0,0,0.1);
+	line-height: 30px;
+	border-radius: 10px 10px;
+	position: absolute;
+	margin: 10px 0;
+}
+
+#searchdiv button:hover {
+	background-color: rgba(225,225,225,0.3);
+	font-weight: bold;
+	
+}
+
+
+body {
+	background: #edc0bf;
+	background: linear-gradient(90deg, #edc0bf, #c4caef 58%);
+}
