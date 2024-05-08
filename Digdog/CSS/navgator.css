@@ -48,7 +48,11 @@
 	width: 50%;
 	height: 55px;
 	border-radius: 20px 20px;
-	margin: 100px 20%;
+	margin: 100px 25%;
+	display: flex;
+	justify-content: flex-start;
+	min-width: 350px;
+	max-width: 50%;
 	
 }
 
@@ -72,7 +76,7 @@
 #searchdiv input {
 	text-decoration: none;
 	display: inline-block;
-	width: 65%;
+	width: calc(100% - 90px);
 	height: 30px;
 	background-color:rgba(0,0,0,0);
 	border-radius: 10px 10px;
@@ -116,8 +120,8 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;/* 替代space-between布局方式 */
-	min-width: 600px;
-	
+	min-width: 640px;
+	max-width: calc(100% - 250px);
 }
 .widgetblock {
 	
