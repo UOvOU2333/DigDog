@@ -112,38 +112,62 @@
 /*以下是小组件层*/
 .widgetline {
 	width: calc(100% - 250px);
-	height: 340px;
 	margin-left: 125px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;/* 替代space-between布局方式 */
-	min-width: 300px;
+	min-width: 600px;
 	
 }
 .widgetblock {
 	
-	/*height: 340px;
+	height: 340px;
 	/* 加入这两个后每个item的宽度就生效了 */
 	min-width: 300px;
-	max-width: calc(100%/ 3);
+	max-width: calc((100% - 60px) / 3);
 	/* END */
 	
 	/* 这里的10px = (分布个数3-1)*间隙5px, 可以根据实际的分布个数和间隙区调整 */
-	width: calc(100% / 3);
+	width: calc((100% - 60px) / 3);
+	/* END */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 10px;
+	
+}
+/*.widgetblock:nth-child(3n) {
+     去除第3n个的margin-right 
+    margin-right: 0;
+}*/
+
+.widgettext {
+	text-align: center;
+	width: 300px;
+	height: 30px;
+	line-height: 30px;
+	color: white;
+}
+.widgetblock_long {
+	
+	/*height: 340px;
+	/* 加入这两个后每个item的宽度就生效了 */
+	min-width: 600px;
+	max-width: calc(200% / 3);
+	/* END */
+	
+	/* 这里的10px = (分布个数3-1)*间隙5px, 可以根据实际的分布个数和间隙区调整 */
+	width: calc(200% / 3);
 	/* END */
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	
 }
-.widgetblock:nth-child(3n) {
-    /* 去除第3n个的margin-right */
-    margin-right: 0;
-}
 
-.widgettext {
+.widgettext_long {
 	text-align: center;
-	width: 300px;
+	width: 600px;
 	height: 30px;
 	line-height: 30px;
 	color: white;
