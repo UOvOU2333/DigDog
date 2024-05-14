@@ -9,15 +9,15 @@
     height: 100px;
     border-radius: 50%;
     cursor: pointer;
-    left: 1520px;
-    
+    left: 700px;
+    top: -95px;
     
   }
   
   #avatar-input {
     position: absolute;
-    top: 0;
-    left: 1520px;
+    top: -50px;
+    left: 577px;
     opacity: 0;
     cursor: pointer;
   }
