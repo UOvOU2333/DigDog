@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <link rel="stylesheet" href="背景.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #000000;
+        }
+        header {
+            background-color: #3577eb;
+            color: #fff;
+            padding: 1px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .info {
+            margin-bottom: 40px;
+        }
+        .info h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .info p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .about-me, .skills, .portfolio {
+            margin-bottom: 40px;
+        }
+        .about-me h2, .skills h2, .portfolio h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .about-me p, .skills ul, .portfolio .portfolio-item {
+            font-size: 16px;
+        }
+        .portfolio .portfolio-item {
+            margin-bottom: 30px;
+        }
+        .portfolio .portfolio-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .portfolio .portfolio-item img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>个人主页</h1>
+     <div style="position: relative;">
+        <input id="upload-input" style="position: absolute; top: 0; bottom: 0; left: 0;right: 0; opacity: 0;" type="file" accept="image/gif, image/jpg, image/png" onchange="showImg(this)" multiple />
+        <div style="text-align: top">
+            <span style="font-size: 12px;"></span>
+            <img id="upload" src="PyLRS6zC_400x400.jpg" style="width: 100px; height: 100px; vertical-align: middle;border-radius :50%;overflow:hidden;" />
+        </div>
+    </div>
+    <div id="imgContainer" style="margin-top: 10px;"></div>
+    </header>
+    <div class="container">
+        <div class="info">
+            <h2>个人信息</h2>
+            <p><strong>姓名：</strong> 你的姓名</p>
+            <p><strong>电话：</strong> 你的电话号码</p>
+            <p><strong>地址：</strong> 你的地址</p>
+        </div>
+        <div class="about-me">
+            <h2>关于我</h2>
+            <p>在这里写上你的个人简介...</p>
+        </div>
+        <div class="skills">
+            <h2>个人技能</h2>
+            <ul>
+                <li>技能1</li>
+                <li>技能2</li>
+                <li>技能3</li>
+                <!-- 添加更多技能 -->
+            </ul>
+        </div>
+        <div class="portfolio">
+            <h2>我的作品</h2>
+            <div class="portfolio-item">
+                <img src="作品图片1.jpg" alt="作品1">
+                <!-- 添加作品标题、描述、链接等信息 -->
+            </div>
+            <div class="portfolio-item">
+                <img src="作品图片2.jpg" alt="作品2">
+                <!-- 添加作品标题、描述、链接等信息 -->
+            </div>
+            <!-- 添加更多作品 -->
+        </div>
+    </div>
+     
+</body>
+<script type="text/javascript">
+    function showImg(obj) {
+        var files = obj.files
+        // document.getElementById("imgContainer").innerHTML = getImgsByUrl(files)
+        getImgsByFileReader(document.getElementById("imgContainer"), files)
+    }
+ 
+    // 使用window.URL.createObjectURL(file)读取file实例并显示图片
+    function getImgsByUrl(files) {
+        var elements = ''
+        for (var i = 0; i < files.length; i++) {
+            var url = window.URL.createObjectURL(files[i])
+            elements += "<img src='"+ url + "' style='width: 40px; height: 40px; vertical-align: middle; margin-right: 5px;' />"
+        }
+        return elements
+    }
+ 
+    // 使用FileReader读取file实例并显示图片
+    function getImgsByFileReader(el, files) {
+        for (var i = 0; i < files.length; i++) {
+            let img = document.createElement('img')
+            img.setAttribute('style', 'width: 40px; height: 40px; vertical-align: middle; margin-right: 5px;')
+            el.appendChild(img)
+            var reader = new FileReader()
+            reader.onload = function(e) {
+                img.src = e.target.result
+            }
+            reader.readAsDataURL(files[i]) 
+        }
+    }
+</script>
+</html>
