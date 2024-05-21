@@ -1,0 +1,23 @@
+#avatar-link {
+				position: fixed;
+				display: block;
+				/* 可根据需要调整头像大小 */
+				height: 50px;
+				top: 10px; /* 距离顶部的距离 */
+				right: 10px; /* 距离右侧的距离 */
+				text-decoration: none;
+				border: 5px solid #000000;
+				border-radius: 50px; /* 让头像呈圆形 */
+				padding: 5px; /* 可根据需要调整内边距 */
+				background-color: rgba(225,225,225,0.3); /* 背景色 */
+			}
+		  
+#avatar-link img {
+	width: 50px; /* 可根据需要调整头像大小 */
+	height: 50px;
+	border-radius: 50px; /* 让头像呈圆形 */
+}
+		  
+#avatar-link:hover {
+	background-color: rgba(255,255,255,0.3); /* 鼠标悬停时的背景色 */
+}

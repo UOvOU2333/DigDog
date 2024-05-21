@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    background-image: url('110.webp'); /* 替换 'background.jpg' 为你的背景图片路径 */
+    background-image: url('../Resource/个人主页背景.webp'); /* 替换 'background.jpg' 为你的背景图片路径 */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
