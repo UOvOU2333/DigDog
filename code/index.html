@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>网页主页面</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif; /* 使用默认的 sans-serif 字体 */
+    }
+
+    .container {
+      position: relative;
+      height: 100vh;
+    }
+
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .welcome {
+      text-align: center;
+      color: #0c0c0c; /* 统一使用这个颜色 */
+    }
+
+    .welcome h1 {
+      font-size: 50px; /* 适当调小字体以适应页面 */
+      margin-bottom: 20px; /* 添加一些底部间距 */
+    }
+
+    .welcome p {
+      font-size: 18px;
+      margin-bottom: 30px; /* 添加一些底部间距 */
+    }
+
+    .enter-button {
+      background-color: #4CAF50; /* 添加一个绿色背景 */
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+
+    /* 小组件样式 */
+    .widgets {
+      display: none; /* 初始隐藏 */
+      text-align: center;
+    }
+
+    .widget {
+      border: 1px solid #141313;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 5px;
+      background-color: #0b0a0a;
+      cursor: pointer; /* 添加指针样式 */
+    }
+
+    .collapse-button {
+      background-color: #00ff88; /* 橙色 */
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px; /* 上边距 */
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="first-page">
+    <img src="047d9d163ecfbaa74febdeac18da9a1.jpg" alt="背景图片" class="background">
+    <div class="content">
+      <div class="welcome">
+        <h1>Welcome to Our Page!</h1>
+        <p>欢迎来到我们的界面！</p>
+        <a href="#" class="enter-button">进入主页</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="second-page" style="display: none;">
+    <img src="94873f0747221e47fb7ed1978a11ed4.jpg" alt="背景图片" class="background">
+    <div class="content">
+      <div class="welcome">
+        <h1>小组件介绍</h1>
+        <p><a href="#" class="details-link">点击详情介绍</a></p>
+        <p><a href="#" class="back-to-first-page">返回上一页</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="third-page" style="display: none;">
+    <img src="123b11e62e2dbb8841c87df0e9f1254.jpg" alt="背景图片" class="background">
+    <div class="content">
+      <div class="welcome">
+        <h1>小组件详情介绍</h1>
+        <div class="widgets" id="widgets">
+          <div class="widget">组件一介绍</div>
+          <div class="widget">组件二介绍</div>
+          <div class="widget">组件三介绍</div>
+          <div class="widget">组件四介绍</div>
+          <div class="widget">组件五介绍</div>
+          <div class="widget">组件六介绍</div>
+          <div class="widget">组件七介绍</div>
+          <div class="widget">组件八介绍</div>
+        </div>
+        <p><a href="#" class="back-to-second-page">返回上一页</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 当页面加载完毕后，为进入主页按钮添加点击事件
+    document.addEventListener("DOMContentLoaded", function() {
+      const enterButton = document.querySelector('.enter-button');
+      const firstPage = document.getElementById('first-page');
+      const secondPage = document.getElementById('second-page');
+      const thirdPage = document.getElementById('third-page');
+      const backToFirstPage = document.querySelector('.back-to-first-page');
+      const backToSecondPage = document.querySelector('.back-to-second-page');
+      const detailsLink = document.querySelector('.details-link');
+      const collapseButton = document.querySelector('.collapse-button');
+      const details = document.createElement('div');
+      details.classList.add('arrow-down');
+      details.innerHTML = '&#9660; <span>点击详情介绍</span>';
+      secondPage.appendChild(details);
+
+      // 当进入主页按钮被点击时，显示第二页
+      enterButton.addEventListener('click', function(event) {
+        event.preventDefault(); // 阻止默认行为，即阻止页面跳转
+        firstPage.style.display = 'none'; // 隐藏第一页
+        secondPage.style.display = 'block'; // 显示第二页
+      });
+
+      // 当返回第一页链接被点击时，显示第一页
+      backToFirstPage.addEventListener('click', function(event) {
+        event.preventDefault(); // 阻止默认行为，即阻止页面跳转
+        secondPage.style.display = 'none'; // 隐藏第二页
+        firstPage.style.display = 'block'; // 显示第一页
+      });
+
+      // 当返回上一页链接被点击时，显示第二页
+      backToSecondPage.addEventListener('click', function(event) {
+        event.preventDefault(); // 阻止默认行为，即阻止页面跳转
+        thirdPage.style.display = 'none'; // 隐藏第三页
+        secondPage.style.display = 'block'; // 显示第二页
+      });
+
+      // 点击详情介绍链接时，显示第三页
+      detailsLink.addEventListener('click', function(event) {
+        event.preventDefault(); // 阻止默认行为，即阻止页面跳转
+        secondPage.style.display = 'none'; // 隐藏第二页
+        thirdPage.style.display = 'block'; // 显示第三页
+      });
+    });
+  </script>
+</body>
+</html>
