@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>常用网址导航栏</title>
+  <style>
+    /* 样式化导航栏 */
+    .navbar {
+      background-color: #2a2a2a93;
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end; /* 使图标位于最右边 */
+      border-radius: 10px;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .search-box-container .search-box {
+      display: none; /* 初始隐藏搜索栏 */
+      align-items: center;
+    }
+
+    .search-box-container.active .search-box {
+      display: flex; /* 激活时显示搜索栏 */
+    }
+
+    .search-box input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: none;
+      border-radius: 20px;
+      outline: none;
+    }
+
+    .search-box input[type="submit"] {
+      background-color: #555;
+      color: #fff;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 20px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .search-box input[type="submit"]:hover {
+      background-color: #666;
+    }
+    .user-avatar {
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+    }
+
+    .user-avatar img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 5px;
+    }
+
+    .user-name {
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .settings-icon {
+      color: #fff;
+      font-size: 20px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script>
+    window.addEventListener("DOMContentLoaded", function() {
+      var searchIcon = document.querySelector(".search-icon");
+      var searchBoxContainer = document.querySelector(".search-box-container");
+
+      searchIcon.addEventListener("click", function() {
+        searchBoxContainer.classList.toggle("active");
+      });
+
+      var searchButton = document.querySelector(".search-box input[type='submit']");
+      searchButton.addEventListener("click", function() {
+        searchButton.style.animation = "buttonScale 0.5s";
+        // 添加动画效果后，恢复初始状态以便下次使用
+        setTimeout(function() {
+          searchButton.style.animation = "";
+        }, 500);
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="navbar">
+    <!-- 常用网址链接 -->
+    <div class="navbar-left">
+      <!-- 这里将动态生成的链接插入 -->
+    </div>
+
+    <!-- 搜索框 -->
+    <div class="search-box-container">
+        <form id="SearchForm" action="https://www.baidu.com/s" method="GET" target="_blank">
+      <i class="fas fa-search search-icon"></i>
+      <div class="search-box">
+        <input type="text" name="wd" placeholder="搜索">
+        <input type="submit" value="搜索">
+      </div>
+    </div>
+
+    <!-- 设置图标 -->
+    <a href="https://www.example.com/settings">
+      <span class="settings-icon"><i class="fas fa-cog"></i></span>
+    </a>
+
+    <!-- 用户头像和名称 -->
+    <div class="user-avatar">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpMQLe-7UHMMouRUgp65vsiRdrXjIdWTOLegBvvcFMZw&s" alt="User Avatar">
+      <span class="user-name"></span>
+    </div>
+  </div>
+
+</body>
+</html>
