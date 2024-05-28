@@ -119,39 +119,41 @@
 			<!--第一行第一个小组件结束-->
 			
 			<!--以下是第一行第二个小组件-->
-			<div class="widgetblock">
-				<!--日历小组件-->
-				<div class="calendar">
-				<!--日历小组件结束-->
-				  <header>
-				    <div class="button-nav">
-				      <button class="prev">
-				        <i class="ri-arrow-left-s-line"></i>
-				      </button>
-				      <button class="next">
-				        <i class="ri-arrow-right-s-line"></i>
-				      </button>
-				    </div>
-				    <p id="title"></p>
-				    <button id ="today" class="today">今天</button>
-				  </header>
-				  <div class="week">
-				    <li>日</li>
-				    <li>一</li>
-				    <li>二</li>
-				    <li>三</li>
-				    <li>四</li>
-				    <li>五</li>
-				    <li>六</li>
-				  </div>
-				  <div id="content" class="content">
-				    <div id="bg" class="bg flex-center"></div>
-				  </div>
+			<!--以下是日历小组件的新代码-->
+				<div class="widgetblock">
+					<div class="flip-container">
+						<div class="calendar_front">
+							<div class="content_front">
+								<div class="day_front"></div>
+								<div class="date_front"></div>
+							</div>
+						</div>
+						<div class="calendar">
+							<header>
+								<div class="button-nav">
+									<button class="prev"><i class="ri-arrow-left-s-line"></i></button>
+									<button class="next"><i class="ri-arrow-right-s-line"></i></button>
+								</div>
+								<p id="title"></p>
+								<button id="today" class="today">今天</button>
+							</header>
+							<div class="week">
+								<li>日</li>
+								<li>一</li>
+								<li>二</li>
+								<li>三</li>
+								<li>四</li>
+								<li>五</li>
+								<li>六</li>
+							</div>
+							<div id="content" class="content">
+								<div id="bg" class="bg flex-center"></div>
+							</div>
+						</div>
+					</div>
+					<div class="widgettext">日历</div>
 				</div>
-				<div class="widgettext"><!--天气小组件文字-->
-					日历
-				</div>
-			</div>
+				<!--日历小组件代码结束-->
 			<!--第一行第二个小组件结束-->
 			
 			<!--以下是第一行第三个小组件-->

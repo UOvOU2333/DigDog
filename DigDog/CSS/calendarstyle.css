@@ -1,3 +1,44 @@
+/* 第一个日历 */
+.calendar_front {
+    width: 240px;
+    height: 240px;
+    border-radius: 20px;
+	margin: 40px 30px 30px 30px;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.8s;
+  }
+  
+  .week_front {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .content_front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .day_front {
+    font-size: 36px;
+  }
+  
+  .date_front {
+    font-size: 72px;
+  }
+  
+  /* 第二个日历 */
   .calendar li {
     list-style: none;
   }
@@ -139,3 +180,49 @@
       color: rgba(0, 0, 0, 0.3);
     }
   
+  .day_front {
+    font-size: 30px;
+    font-weight: bold;
+	color: rgb(255,59,58);
+  }
+  
+  .date_front {
+    font-size: 100px;
+  }
+  
+  .calendar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .calendar-container .calendar_front,
+  .calendar-container .calendar_back {
+    flex-basis: 45%;
+    padding: 20px;
+  }
+  
+  .flip-container {
+    perspective: 1000px;
+  }
+  
+  .flip-container:hover .calendar_front {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-container:hover .calendar_back {
+    transform: rotateY(0deg);
+  }
+  
+  .calendar_front,
+  .calendar_back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 1s;
+  }
+  
+  .calendar_back {
+    transform: rotateY(180deg);
+  }
