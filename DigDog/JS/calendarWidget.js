@@ -193,3 +193,11 @@ document.querySelector('.next').addEventListener('click', function () {
   changeMonth('next');
 });
 document.getElementById('today').addEventListener('click', changeToToday);
+
+var currentDate = new Date();
+		var currentDayOfWeek = currentDate.toLocaleString('en-US', { weekday: 'long' });
+		var currentDay = currentDate.getDate();
+		var dayContainerFront = document.querySelector('.calendar_front .day_front');
+		var dateContainerFront = document.querySelector('.calendar_front .date_front');
+		dayContainerFront.textContent = currentDayOfWeek;
+		dateContainerFront.textContent = currentDay;

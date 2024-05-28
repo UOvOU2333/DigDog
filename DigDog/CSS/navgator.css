@@ -45,6 +45,7 @@
 #nav2 {
 	/*background-color: #51aceb;*/
 	position: fixed;
+	z-index: 10;
 	width: 50%;
 	height: 55px;
 	border-radius: 20px 20px;
@@ -157,11 +158,11 @@
 	/*height: 340px;
 	/* 加入这两个后每个item的宽度就生效了 */
 	min-width: 600px;
-	max-width: calc(200% / 3);
+	max-width: calc((200% - 60px)/ 3);
 	/* END */
 	
 	/* 这里的10px = (分布个数3-1)*间隙5px, 可以根据实际的分布个数和间隙区调整 */
-	width: calc(200% / 3);
+	width: calc((200% - 60px)/ 3);
 	/* END */
 	display: flex;
 	flex-wrap: wrap;
