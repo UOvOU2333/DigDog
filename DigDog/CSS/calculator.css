@@ -30,7 +30,7 @@
 				
 #calculator #text{
 	display: block;
-	background-color: rgba(225,225,225,0.3);
+	background-color: rgba(255,255,255,0.5);
 	margin-left: 0px;
 	border-style:solid;
 	border-radius:10px;
@@ -52,11 +52,11 @@
 	height: 25px;
 	line-height: 25px;
 	text-align: center;
-	background-color:rgba(225,225,225,0.3);
+	background-color:rgba(255,255,255,0.5);
 	font-size: 15px;
 	font-family: "微软雅黑";
 	color: #666;
 	}
 #calculator #c_value ul li:hover{
-	background-color:rgba(255,255,255,0.3);
+	background-color:rgba(255,255,255,0.8);
 }
