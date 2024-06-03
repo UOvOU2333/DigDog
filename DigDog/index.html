@@ -18,6 +18,7 @@
 	<link rel="stylesheet" type="text/css" href="CSS/calendarstyle.css">
 	<link rel="stylesheet" type="text/css" href="CSS/IndexToPer.css">
 	<link rel="stylesheet" type="text/css" href="CSS/calculator.css">
+	<link rel="stylesheet" type="text/css" href="CSS/bang.css"/>
 	<body>
 		<a href="HTML/个人主页.html" id="avatar-link">
 			<img id="PHome" src="Resource/主页暂定头像.png" alt="Home" >
@@ -200,63 +201,12 @@
 			
 			<!--以下是第二行第一个小组件-->
 			<div class="widgetblock">
-				<!--以下是天气小组件-->
-				<div id = "weatherWidget" class="widget">
-					<div id="weatherHead">
-						<div id="weatherTemp"></div>
-						<span style="font-size: 22px;">C°</span>
-						<img id="weatherimg" />
-						<!--预留功能"大中小"
-						<div id="altdiv">
-							<button id="large" onclick="change('large')" >大</button>
-							<button id="medium" onclick="change('medium')">中</button>
-							<button id="small" onclick="change('small')">小</button>
-						</div>
-						-->
-					</div>
-					<!--筛选框和输入-->
-					<div id="weatherInput">
-						<select id="citySelect" onchange="getWeather()">
-							<option value="Shanghai">上海</option>
-							<option value="Beijing">北京</option>
-							<option value="Hangzhou">杭州</option>
-							<option value="Wenzhou">温州</option>
-							<option value="Xiamen">厦门</option>
-							<option value="Changsha">长沙</option>
-							<option value="Chengdu">成都</option>
-							<option value="Shenzhen">深圳</option>
-							<option value="Macao">澳门</option>
-						</select>
-						
-						<input type="text" id="cityInput" placeholder="自定义的区域" onchange="getWeather()">
-						
-						<button onclick="getWeather()" id="btn">查询</button>
-					</div>
-					<!--地区和概述-->
-					<div id="mainbody">
-						<div id="site"></div>
-						<div id="weatherResult"></div>
-					</div>
-					<!--详情-->
-					<div id="detailedbody">
-						<div id="top">
-							<div id="weatherHumi"></div>
-							<div id="weatherPress"></div>
-							<div id="changetop"></div>
-						</div>
-						<div id="bottom">
-							<div>湿度</div>
-							<div>大气压</div>
-							<select id="changebot" onchange="getWeather()">
-								<option value="feels_like">体感温度</option>
-								<option value="windspeed">风速</option>
-								<option value="winddeg">风向</option>
-								<option value="cloudsall">云量</option>
-							</select>
-						</div>
-					</div>
+				<div id="bangwidget">
+					<div id="tiltilebang">底栈四连</div>
+					<div class="board" id="board"></div>
+					<button id="resetButton">重置</button>
+					<div id="message"></div>
 				</div>
-				<!--天气小组件结束-->
 				<div class="widgettext"><!--天气小组件文字-->
 					天气
 				</div>
@@ -270,4 +220,5 @@
 	<script src="JS/weatherWidget.js" type="text/javascript" charset="utf-8"></script>
 	<script src="JS/calendarWidget.js"></script>
 	<script src="JS/calculator.js"></script>
+	<script src="JS/bang.js"></script>
 </html>
