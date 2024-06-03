@@ -8,7 +8,12 @@
 	align-content: center;
 	justify-content: center;
 	flex-wrap: wrap;
+	margin-top: 10px;
+	transition: 0.5s;
 }
+#bangwidget:hover{
+	margin-top: 0;
+	}
   
   .board {
     display: grid;
