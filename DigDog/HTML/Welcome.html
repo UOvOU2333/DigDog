@@ -88,16 +88,26 @@
 .back-to-first-page:hover{
 	background-color: rgba(255,255,255,0.8);
 }
-
+@keyframes A {
+		0%{
+			bottom: 40px;
+		}
+		100%{
+			bottom: 55px;
+		}
+	}
     .white-arrow-down {
+	  text-decoration: none;
+	  display: block;
       font-size: 60px;
       cursor: pointer;
       position: absolute;
-      bottom: 20px;
+      bottom: 40px;
       left: 50%;
       transform: translateX(-50%);
       color: rgba(225, 225, 225, 0.5); /* 白色 */
-	  transition: 0.5s;
+	  animation: A 1s ease infinite;
+	  animation-direction: alternate;
     }
 
     .white-arrow-down:hover {
@@ -121,9 +131,11 @@
 	  font-size: 30px;
 	  align-content: center;
 	  transition: 0.5s;
+	  margin-top: 10px;
     }
 	.widget:hover{
 		 background-color: rgba(255,255,255,0.8);
+		 margin-top: 0;
 	}
 
   </style>
@@ -135,7 +147,7 @@
       <p>欢迎来到我们的界面！</p>
     </div>
     <a href="../index.html" class="enter-button">进入主页</a>
-    <div class="white-arrow-down">&#9660;</div>
+    <a class="white-arrow-down" href="#widgets">&#9660;</a>
   </div>
 
   <div class="container" id="second-page" >
@@ -143,13 +155,13 @@
       <div class="welcome">
         <h1></h1>
       </div>
-      <div class="widgets">
+      <div class="widgets" id="widgets">
+		<div class="widget">天气</div>
         <div class="widget">日历</div>
-        <div class="widget">时钟</div>
 		<div class="widget">计算器</div>
+		<div class="widget">时钟</div>
         <div class="widget">倒计时</div>
         <div class="widget">闹钟</div>
-        <div class="widget">壁纸</div>
         <div class="widget">超链接</div>
       </div>
     </div>
