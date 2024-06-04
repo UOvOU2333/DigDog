@@ -19,6 +19,7 @@
 	<link rel="stylesheet" type="text/css" href="CSS/IndexToPer.css">
 	<link rel="stylesheet" type="text/css" href="CSS/calculator.css">
 	<link rel="stylesheet" type="text/css" href="CSS/bang.css"/>
+	<link rel="stylesheet" type="text/css" href="CSS/counter.css">
 	<body>
 		<a href="HTML/个人主页.html" id="avatar-link">
 			<img id="PHome" src="Resource/主页暂定头像.png" alt="Home" >
@@ -208,10 +209,34 @@
 					<div id="message"></div>
 				</div>
 				<div class="widgettext"><!--天气小组件文字-->
-					天气
+					底 栈 四 连
 				</div>
 			</div>
 			<!--第二行第一个小组件结束-->
+			
+			<!--长小组件-->
+			<div class="widgetblock_long">
+				
+				<div id="countdown-timer">
+				    <div class="left">
+						<p id="upper">今年还剩下&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;</p>
+				        <p id="days-left" style="display: inline;"><span id="days-remaining"></span></p>
+						<p id="tian"> 天</p>
+				    </div>
+				    <div class="right">
+				        <div class="circle">
+				            <svg>
+				                <circle cx="125" cy="115" r="80"></circle>
+				                <circle cx="125" cy="115" r="80" id="remaining-circle"></circle>
+				            </svg>
+				        </div>
+				    </div>
+				</div>
+				
+				<div class="widgettext_long">年度剩余日期</div>
+			</div>
+			
+			
 			
 		</section>
 		<!--小组件结束-->
@@ -221,4 +246,5 @@
 	<script src="JS/calendarWidget.js"></script>
 	<script src="JS/calculator.js"></script>
 	<script src="JS/bang.js"></script>
+	<script src="JS/counter.js"></script>
 </html>
