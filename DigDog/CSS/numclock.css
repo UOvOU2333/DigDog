@@ -1,0 +1,33 @@
+#numclock-widget {
+    height: 240px;
+    width: 540px;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace,"agency fb";
+    font-size: 100px;
+    color: #333;
+	background: linear-gradient(90deg, #ffcfce, #d1d8ff 58%);
+	margin-top:10px ;
+	transition: 0.5s;
+}
+
+#numclock-widget:hover{
+	margin-top: 0;
+}
+
+#numborder{
+	position: absolute;
+	height: 240px;
+	width: 540px;
+	background-color: rgba(0,0,0,0);
+	border: rgba(255,255,255,0.6) 10px solid;
+	border-radius: 25px;
+}
+
+#numborder:hover{
+	border: rgba(255,255,255,0.8) 10px solid;
+}

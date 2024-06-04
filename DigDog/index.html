@@ -20,6 +20,8 @@
 	<link rel="stylesheet" type="text/css" href="CSS/calculator.css">
 	<link rel="stylesheet" type="text/css" href="CSS/bang.css"/>
 	<link rel="stylesheet" type="text/css" href="CSS/counter.css">
+	<link rel="stylesheet" type="text/css" href="CSS/link.css">
+	<link rel="stylesheet" type="text/css" href="CSS/numclock.css">
 	<body>
 		<a href="HTML/个人主页.html" id="avatar-link">
 			<img id="PHome" src="Resource/主页暂定头像.png" alt="Home" >
@@ -45,14 +47,14 @@
 			</ul>
 		</div>
 		<!--上边栏-->
-		<div id="nav2" class="blur" >
-			<img src="Resource/IMG_2136.PNG" />
-			<div id="searchdiv">
-				<input type="text" id="search" placeholder="输入搜索内容" />
-				<!--<button onclick="search()">搜索</button>-->
-			</div>
-		</div>
-		<!--两个导航栏结束-->
+				<div id="nav2" class="blur">
+					<img src="Resource/IMG_2136.PNG" />
+					<div id="searchdiv">
+					  <input type="text" id="search" placeholder="输入搜索内容" />
+					  <button id="searchButton">搜索</button>
+					</div>
+				  </div>
+				<!--两个导航栏结束-->
 		
 		<!--基于flex的小组件-->
 		<section class="widgetline" style="padding-top: 250px;">
@@ -215,6 +217,17 @@
 			<!--第二行第一个小组件结束-->
 			
 			<!--长小组件-->
+			<!--数字时钟小组件-->
+			<div class="widgetblock_long">
+				<div id="numclock-widget">
+					<div id="numborder"></div>
+				    <div id="time">00 : 00 : 00</div>
+				</div>
+				<div class="widgettext_long">数字时钟</div>
+			</div>
+			<!--数字时钟小组件结束-->
+			
+			<!--剩余日期-->
 			<div class="widgetblock_long">
 				
 				<div id="countdown-timer">
@@ -235,6 +248,51 @@
 				
 				<div class="widgettext_long">年度剩余日期</div>
 			</div>
+			<!--剩余日期小组件结束-->
+			<!--两个长小组件结束-->
+			
+			<!--收藏超链接小组件-->
+			<div class="widgetblock">
+				<div class="link-widget">
+					<a href="https://s.ecust.edu.cn/" target="_blank" class="link-item">
+					    <img src="../DigDog/Resource/IMG_1617.PNG" alt="ECUST">
+					</a>
+				    <a href="https://www.icloud.com.cn" target="_blank" class="link-item">
+				        <img src="../DigDog/Resource/IMG_2317.PNG" alt="iCloud">
+				    </a>
+				    <a href="https://www.baidu.com" target="_blank" class="link-item">
+				        <img src="../DigDog/Resource/IMG_2136.PNG" alt="Baidu">
+				    </a>
+				    <a href="https://www.github.com" target="_blank" class="link-item">
+				        <img src="../DigDog/Resource/IMG_2320.PNG" alt="GitHub">
+				    </a>
+				</div>
+				
+				<div class="widgettext">
+					收藏
+				</div>
+			</div>
+			
+			<div class="widgetblock">
+				<div class="link-widget">
+				    <a href="https://www.bilibili.com" target="_blank" class="link-item">
+				        <img src="../DigDog/Resource/IMG_2315.PNG" alt="Bilibili">
+				    </a>
+				    <a href="https://www.csdn.net/" target="_blank" class="link-item">
+				        <img src="../DigDog/Resource/IMG_2326.PNG" alt="CSDN">
+				    </a>
+				    <a href="https://www.taobao.com" target="_blank" class="link-item">
+				        <img src="../DigDog/Resource/IMG_2328.PNG" alt="Taobao">
+				    </a>
+				    <a href="https://www.xiaohongshu.com/" target="_blank" class="link-item">
+				        <img src="../DigDog/Resource/IMG_2330.PNG" alt="Xiaohongshu">
+				    </a>
+				</div>
+				
+				<div class="widgettext">
+					收藏
+				</div>
+			</div>
 			
 			
 			
@@ -247,4 +305,6 @@
 	<script src="JS/calculator.js"></script>
 	<script src="JS/bang.js"></script>
 	<script src="JS/counter.js"></script>
+	<script src="JS/navgator.js"></script>
+	<script src="JS/numclock.js"></script>
 </html>

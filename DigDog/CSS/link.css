@@ -1,0 +1,43 @@
+.link-widget {
+    height: 240px;
+    width: 240px;
+    padding: 30px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background: linear-gradient(90deg, #c4caef, #edc0bf 58%);
+	margin-top: 10px;
+	transition: 0.5s;
+}
+
+.link-widget:hover{
+	margin-top: 0;
+}
+
+.link-item {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+	
+}
+
+.link-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+	display: block;
+	margin-top: 10px;
+	transition: 0.5s;
+}
+
+.link-item img:hover{
+	margin-top: 0;
+}

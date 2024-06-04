@@ -54,7 +54,11 @@ circle {
     stroke: rgba(255,255,255,0.8);
     stroke-dasharray: 502;
     stroke-dashoffset: 0;
-    transition: stroke-dashoffset 1.2s ease;
+	transition: stroke-dashoffset 1.2s ease;
+}
+
+#remaining-circle:hover {
+    stroke: rgba(255,255,255,1);
 }
 
 #days-left{
