@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>网页主页面</title>
+  <style>
+    body {
+        background-image: url(../Resource/htmlbg2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .container {
+      position: relative;
+      height: 100vh;
+    }
+
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .welcome {
+      text-align: center;
+      color: #f8f3f3; /* 统一使用这个颜色 */
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .welcome h1 {
+      font-size: 55px; /* 适当调小字体以适应页面 */
+      margin-bottom: 20px; /* 添加一些底部间距 */
+    }
+
+    .welcome p {
+      font-size: 18px;
+      margin-bottom: 30px; /* 添加一些底部间距 */
+    }
+
+    .enter-button,
+    .back-to-first-page {
+      padding: 15px 30px; /* 调整按钮的内边距 */
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px; /* 减小字体大小 */
+      border: none;
+      border-radius: 10px; /* Make border radius larger for rounded corners */
+      cursor: pointer;
+      transition: background-color 0.3s; /* Add transition for smooth color change */
+    
+	}
+
+    .enter-button {
+      background-color: rgba(225, 225, 225, 0.5); /* 白色透明背景 */
+      color: #0c0c0c; /* 添加一个深色文本 */
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .enter-button:hover {
+      background-color: rgba(225, 225, 225, 0.8); /* 悬停时的背景颜色 */
+    }
+
+    .back-to-first-page {
+      background-color: rgba(225, 225, 225, 0.5); /* 白色透明背景 */
+      color: #0c0c0c; /* 添加一个深色文本 */
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+.back-to-first-page:hover{
+	background-color: rgba(255,255,255,0.8);
+}
+
+    .white-arrow-down {
+      font-size: 60px;
+      cursor: pointer;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(225, 225, 225, 0.5); /* 白色 */
+	  transition: 0.5s;
+    }
+
+    .white-arrow-down:hover {
+      color: rgba(225, 225, 225, 0.8);
+    }
+
+    /* 小组件样式 */
+    .widgets {
+      display: flex;
+      text-align: center;
+    }
+
+    .widget {
+      border: 0px solid #f8f2f2;
+	  height: 300px;
+	  width: 100px;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 5px;
+      background-color: rgba(225,225,225,0.6);
+	  font-size: 30px;
+	  align-content: center;
+	  transition: 0.5s;
+    }
+	.widget:hover{
+		 background-color: rgba(255,255,255,0.8);
+	}
+
+  </style>
+</head>
+<body>
+  <div class="container" id="first-page">
+    <div class="welcome">
+      <h1>Welcome to Our Page!</h1>
+      <p>欢迎来到我们的界面！</p>
+    </div>
+    <a href="../index.html" class="enter-button">进入主页</a>
+    <div class="white-arrow-down">&#9660;</div>
+  </div>
+
+  <div class="container" id="second-page" >
+    <div class="content">
+      <div class="welcome">
+        <h1></h1>
+      </div>
+      <div class="widgets">
+        <div class="widget">日历</div>
+        <div class="widget">时钟</div>
+		<div class="widget">计算器</div>
+        <div class="widget">倒计时</div>
+        <div class="widget">闹钟</div>
+        <div class="widget">壁纸</div>
+        <div class="widget">超链接</div>
+      </div>
+    </div>
+    <a href="#" class="back-to-first-page">返回上一页</a>
+  </div>
+
+</body>
+</html>
