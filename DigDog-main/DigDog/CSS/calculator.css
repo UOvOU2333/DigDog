@@ -1,0 +1,64 @@
+
+#calculator{
+	
+	border-radius:30px;
+	width: 300px;
+	background: linear-gradient(90deg, #edc0bf, #c4caef 58%);
+	height: 300px;
+	display :flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	align-items:center;
+	align-content:center;
+	margin-top: 10px;
+	transition: 0.5s;
+	color: black;
+	}
+	
+#calculator:hover{
+	margin-top: 0;
+}
+				
+/*#calculator #c_title h2{
+	
+	text-align: center;
+	width: 275px;
+	font-size: 30px;<!	?>
+	font-family: "微软雅黑";
+	color: #102466;
+	line-height: 15px;
+}*/
+				
+#calculator #text{
+	display: block;
+	background-color: rgba(255,255,255,0.5);
+	margin-left: 0px;
+	border-style:solid;
+	border-radius:10px;
+	width: 220px;
+	height: 50px;
+	font-size: 20px;
+	text-align: right;
+	font-family: "微软雅黑";
+	border: 0;
+	color:black;
+	}
+				
+#calculator #c_value ul li{
+	margin: 5px;
+	list-style: none;
+	border-radius:10px;
+	float:left;
+	width: 45px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	background-color:rgba(255,255,255,0.5);
+	font-size: 15px;
+	font-family: "微软雅黑";
+	color: #666;
+	}
+#calculator #c_value ul li:hover{
+	background-color:rgba(255,255,255,0.8);
+	font-weight: bold;
+}
