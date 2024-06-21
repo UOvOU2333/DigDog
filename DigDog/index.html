@@ -10,6 +10,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap" rel="stylesheet">
 		<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 		
+		
 		<title>导航页</title>
 		
 	</head>
@@ -22,6 +23,7 @@
 	<link rel="stylesheet" type="text/css" href="CSS/counter.css">
 	<link rel="stylesheet" type="text/css" href="CSS/link.css">
 	<link rel="stylesheet" type="text/css" href="CSS/numclock.css">
+	<link rel='stylesheet' type='text/css' href='CSS/倒计时.css'></link>
 	<body>
 		<a href="HTML/个人主页.html" id="avatar-link">
 			<img id="PHome" src="Resource/主页暂定头像.png" alt="Home" >
@@ -296,6 +298,47 @@
 			
 			
 			
+			<!--倒计时小组件-->
+			<div class="widgetblock_long">
+				
+				<div id="widgets-alarm_clock" class="widget"> <!-- 定义 小组件容器 -->
+					<div class="img-section"> <!-- 表图 部分-->
+
+						<img src="../Resource/hour_hand_mode1.png" id="hourHand" class="pointer-img" onclick="toggleClockMode()">
+						<img src="../Resource/minute_hand_mode1.png" id="minuteHand" class="pointer-img">
+						<img src="../Resource/second_hand_mode1.png" id="secondHand" class="pointer-img">
+						<img src="../Resource/clock_face_mode1.png" id="clockFace" onclick="toggleBackgroundMode()">
+
+
+					</div>
+					<div class="numbers-section"> <!-- 倒计时数字显示 部分 -->
+
+						<div class="alarm_clock_1" id="countdown1"> <!-- 倒计时1 -->
+							<!-- 倒计时内容将通过JavaScript动态生成 -->
+
+						</div>
+						<div class="alarm_clock_2" id="countdown2"> <!-- 倒计时2 -->
+							<!-- 倒计时内容将通过JavaScript动态生成 -->
+
+						</div>
+						<div class="alarm_clock_3" id="countdown3"> <!-- 倒计时3 -->
+							<!-- 倒计时内容将通过JavaScript动态生成 -->
+
+						</div>
+					</div>
+				</div>
+
+
+				<img src="pics/animation_image.png" id="animationImage" class="hidden" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+
+				<!--倒计时小组件结束-->
+				<div class="widgettext_long"><!--倒计时小组件文字-->
+					倒计时
+				</div>
+				
+			</div>
+			<!--第三行第一个小组件结束-->
+			
 		</section>
 		<!--小组件结束-->
 		
@@ -307,4 +350,5 @@
 	<script src="JS/counter.js"></script>
 	<script src="JS/navgator.js"></script>
 	<script src="JS/numclock.js"></script>
+	<script src="JS/倒计时.js"></script>
 </html>
