@@ -45,6 +45,7 @@
 #nav2 {
 	/*background-color: #51aceb;*/
 	position: fixed;
+	z-index: 10;
 	width: 50%;
 	height: 55px;
 	border-radius: 20px 20px;
@@ -76,7 +77,7 @@
 #searchdiv input {
 	text-decoration: none;
 	display: inline-block;
-	width: calc(100% - 90px);
+	width: calc(100% - 190px);
 	height: 30px;
 	background-color:rgba(0,0,0,0);
 	border-radius: 10px 10px;
@@ -91,22 +92,18 @@
 	font-weight: bold;
 	border: 0px;
 }
-/*
-#searchdiv button {
-	text-decoration: none;
-	color: black;
-	display: inline;
-	width: 50px;
-	height: 35px;
-	background-color: rgba(225,225,225,0.3);
-	line-height: 30px;
-	border-radius: 10px 10px;
-	position: absolute;
-	margin: 10px 0;
-	border: 0;
-}*/
 
-#searchdiv button:hover {
+#searchButton{
+	height: 30px;
+	width: 50px;
+	position: absolute;
+	right: 30px;
+	top: 12px;
+	background-color: rgba(225,225,225,0.3);
+	border-radius: 10px;
+}
+
+#searchButton:hover {
 	background-color: rgba(255,255,255,0.3);
 	font-weight: bold;
 	
@@ -157,16 +154,16 @@
 	/*height: 340px;
 	/* 加入这两个后每个item的宽度就生效了 */
 	min-width: 600px;
-	max-width: calc(200% / 3);
+	max-width: calc((200% - 60px)/ 3);
 	/* END */
 	
 	/* 这里的10px = (分布个数3-1)*间隙5px, 可以根据实际的分布个数和间隙区调整 */
-	width: calc(200% / 3);
+	width: calc((200% - 60px)/ 3);
 	/* END */
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	
+	margin: 10px;
 }
 
 .widgettext_long {

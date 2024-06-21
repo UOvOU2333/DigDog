@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>欢迎</title>
+  <style>
+    body {
+        background-image: url(../Resource/htmlbg2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .container {
+      position: relative;
+      height: 100vh;
+    }
+
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .welcome {
+      text-align: center;
+      color: #f8f3f3; /* 统一使用这个颜色 */
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .welcome h1 {
+      font-size: 55px; /* 适当调小字体以适应页面 */
+      margin-bottom: 20px; /* 添加一些底部间距 */
+    }
+
+    .welcome p {
+      font-size: 18px;
+      margin-bottom: 30px; /* 添加一些底部间距 */
+    }
+
+    .enter-button,
+    .back-to-first-page {
+      padding: 15px 30px; /* 调整按钮的内边距 */
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px; /* 减小字体大小 */
+      border: none;
+      border-radius: 10px; /* Make border radius larger for rounded corners */
+      cursor: pointer;
+      transition: background-color 0.3s; /* Add transition for smooth color change */
+    
+	}
+
+    .enter-button {
+      background-color: rgba(225, 225, 225, 0.5); /* 白色透明背景 */
+	  -webkit-backdrop-filter: blur(10px);
+	  backdrop-filter: blur(10px);
+      color: #0c0c0c; /* 添加一个深色文本 */
+      position: fixed;
+      top: 30px;
+      right: 30px;
+    }
+
+    .enter-button:hover {
+      background-color: rgba(225, 225, 225, 0.65); /* 悬停时的背景颜色 */
+    }
+
+    .back-to-first-page {
+      background-color: rgba(225, 225, 225, 0.65); /* 白色透明背景 */
+	  -webkit-backdrop-filter: blur(10px);
+	  backdrop-filter: blur(10px);
+      color: #0c0c0c; /* 添加一个深色文本 */
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .back-to-first-page:hover {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    @keyframes A {
+      0% {
+        bottom: 40px;
+      }
+      100% {
+        bottom: 55px;
+      }
+    }
+
+    .white-arrow-down {
+      text-decoration: none;
+      display: block;
+      font-size: 60px;
+      cursor: pointer;
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(225, 225, 225, 0.7); /* 白色 */
+      animation: A 1s ease infinite;
+      animation-direction: alternate;
+    }
+
+    .white-arrow-down:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* 小组件样式 */
+    .widgets {
+      display: flex;
+      text-align: center;
+    }
+
+    .widget {
+      border: 0px solid #f8f2f2;
+      height: 300px;
+      width: 100px;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 5px;
+      background-color: rgba(225, 225, 225, 0.6);
+	  -webkit-backdrop-filter: blur(10px);
+	  backdrop-filter: blur(10px);
+      font-size: 30px;
+	  font-weight: bold;
+      align-content: center;
+      transition: 0.5s;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .widget:hover {
+      background-color: rgba(255, 255, 255, 0.8);
+      margin-top: 0;
+    }
+
+    .description {
+      margin: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: rgba(225, 225, 225, 0.6);
+	  -webkit-backdrop-filter: blur(10px);
+	  backdrop-filter: blur(10px);
+      color: #0c0c0c;
+	  font-size: 20px;
+	  line-height: 20px;
+    }
+	
+	.descriptionafter {
+	  margin: 10px;
+	  padding: 10px;
+	  border-radius: 5px;
+	  background-color: rgba(255, 255, 255, 0.8);
+	  color: #0c0c0c;
+	  font-size: 20px;
+	  line-height: 20px;
+	}
+	
+  </style>
+</head>
+<body>
+  <div class="container" id="first-page">
+    <div class="welcome">
+      <h1>Welcome to Our Page!</h1>
+      <p>欢迎来到我们的界面！</p>
+    </div>
+    <a class="white-arrow-down" href="#widgets">&#9660;</a>
+  </div>
+
+  <div class="container" id="second-page">
+	  <a href="../index.html" class="enter-button">进入主页</a>
+    <div class="content">
+      
+      <div class="widgets" id="widgets">
+        <div class="widget" onclick="showDescription('天气')">天气</div>
+        <div class="widget" onclick="showDescription('日历')">日历</div>
+        <div class="widget" onclick="showDescription('计算器')">计算器</div>
+        <div class="widget" onclick="showDescription('时钟')">时钟</div>
+        <div class="widget" onclick="showDescription('倒计时')">倒计时</div>
+        <div class="widget" onclick="showDescription('小游戏')">小游戏</div>
+        <div class="widget" onclick="showDescription('超链接')">超链接</div>
+      </div>
+      <div class="description" id="description"></div>
+    </div>
+    <a href="#" class="back-to-first-page">返回上一页</a>
+  </div>
+
+  <script>
+    function showDescription(feature) {
+      const descriptions = {
+        '天气': '天气功能 可以显示当前地区的天气情况，也可以查看其他地区的天气情况。',
+        '日历': '日历功能 可以显示日期、星期、月份的日历，同时可以查看其他日期。',
+        '计算器': '计算器功能 可以进行基本的四则算术运算。',
+        '时钟': '时钟功能 可以显示当前的时间。',
+        '倒计时': '倒计时功能 可以设置一个倒计时器。',
+        '小游戏': '小游戏功能 包含一个从下向上放置的四连棋盘游戏。',
+        '超链接': '超链接功能 可以跳转到指定的链接。'
+      };
+      document.getElementById("description").innerText = descriptions[feature] || '此功能没有简介。';
+	  document.getElementById("description").classList.add('descriptionafter')
+	}
+  </script>
+</body>
+</html>

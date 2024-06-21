@@ -1,0 +1,74 @@
+#bangwidget{
+	width: 270px;
+	padding: 15px;
+	height: 270px;
+	background: linear-gradient(90deg, #c4caef, #edc0bf 58%);
+	border-radius: 30px;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 10px;
+	transition: 0.5s;
+}
+#bangwidget:hover{
+	margin-top: 0;
+	}
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(7, 30px);
+    grid-gap: 5px;
+	margin-top: 5px;
+  }
+  .cell {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(225,225,225,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+	border-radius: 5px;
+  }
+  .cell::before {
+    content: '';
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background-color: #aaa;
+    position: absolute;
+  }
+  .red::before {
+    background-color: red;
+  }
+  .yellow::before {
+    background-color: yellow;
+  }
+  #resetButton {
+    cursor: pointer;
+	display: block;
+	height: 30px;
+	width: 100px;
+	line-height: 25px;
+	font-size: 15px;
+	margin-top: 5px;
+	border-radius: 10px;
+	border: 0;
+	background: rgba(225,225,225,0.6);
+  }
+  
+  #resetButton:hover{
+	  background: rgba(255,255,255,0.6);
+  }
+  
+  #message{
+	  line-height: 30px;
+	  height: 30px;
+	  margin-top: 5px;
+	  margin-left: 15px;
+  }
+  #tiltilebang{
+	  font-weight: bold;
+  }
